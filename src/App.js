@@ -1,14 +1,14 @@
 import './App.css';
 import Home from './pages/Home';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-      <h1>Building Google Clone</h1>
-
-      {/*Home (the one with the search on)*/}
-      <Home />
-      {/* SearchPage (The results page) */}
+      <Routes>
+        <Route path="/search" element={<h1>This is the search page</h1>} />
+        <Route path="/" element={<Home/>} />
+      </Routes>
     </div>
   );
 }
