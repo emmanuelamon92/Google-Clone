@@ -1,7 +1,10 @@
 import React from 'react'
 import './Home.css';
 import { Link } from 'react-router-dom';
+import { Apps as AppsIcon } from '@mui/icons-material';
+import { Avatar } from '@mui/material';
 // import AppsIcon from '@mui/icons-material/Apps';
+
 
 function home() {
     return (
@@ -14,8 +17,8 @@ function home() {
                 <div className='home__headerRight'>
                     <Link to='/gmail'>Gmail</Link>
                     <Link to='/images'>Images</Link>
-                    {/* <AppsIcon /> */}
-
+                    <AppsIcon />
+                    <Avatar />
                     {/* Icon */}
                     {/* Avatar */}
                 </div>
