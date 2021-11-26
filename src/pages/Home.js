@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom';
 import { Apps as AppsIcon } from '@mui/icons-material';
 import { Avatar } from '@mui/material';
 // import AppsIcon from '@mui/icons-material/Apps';
+import Search from './Search';
 
 
-function home() {
+function Home() {
     return (
         <div className='home'>
             <div className='home__header'>
@@ -19,16 +20,17 @@ function home() {
                     <Link to='/images'>Images</Link>
                     <AppsIcon />
                     <Avatar />
-                    {/* Icon */}
-                    {/* Avatar */}
                 </div>
             </div>
 
             <div className='home__body'>
                 <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="" />
             </div>
+            <div className="home__inputContainer">
+                <Search />
+            </div>
         </div>
     )
 }
 
-export default home
+export default Home
