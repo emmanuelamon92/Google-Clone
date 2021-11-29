@@ -1,16 +1,20 @@
 import React, {useState} from 'react'
 import './Search.css'
 import { Search as SearchIcon, Mic as MicIcon } from '@mui/icons-material';
-import { Button } from '@mui/material'
+import { Button } from '@mui/material';
+import { Link, useNavigate } from 'react-router-dom';
 
 
-function Search() {
+function Search({hideButtons = false}) {
     const [input, setInput] = useState('')
-
+    const navigate = useNavigate()
+    
     const search = e => {
         e.preventDefault();
 
         console.log('you hit the search button >>', input)
+        
+        navigate('/search')
     }
     return (
         <form className='search'>
@@ -19,11 +23,18 @@ function Search() {
                 <input value={input} onChange={e => setInput(e.target.value)} />
                 <MicIcon />
             </div>
-
-            <div className='search__buttons'>
-                <Button type='submit' onClick={ search } varient='outlined'>Google Search</Button>
-                <Button varient='outlined'>I'm Feeling Lucky</Button>
-            </div>
+            {!hideButtons ? (
+                <div className='search__buttons'>
+                    <Button type='submit' onClick={search} varient='outlined'>Google Search</Button>
+                    <Button varient='outlined'>I'm Feeling Lucky</Button>
+                </div>
+            ) : (
+                <div className='search__buttons'>
+                    <Button className='search__buttonsHidden'type='submit' onClick={search} varient='outlined'>Google Search</Button>
+                    <Button className='search__buttonsHidden' varient='outlined'>I'm Feeling Lucky</Button>
+                </div>    
+            )}
+            
         </form>
 
     )
