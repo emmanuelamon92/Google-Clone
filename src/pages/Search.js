@@ -1,6 +1,7 @@
 import React from 'react'
 import './Search.css'
 import { Search as SearchIcon, Mic as MicIcon } from '@mui/icons-material';
+import { Button } from '@mui/material'
 
 
 function Search() {
@@ -11,7 +12,13 @@ function Search() {
                 <input />
                 <MicIcon />
             </div>
+
+            <div className='search__buttons'>
+                <Button varient='outlined'>Google Search</Button>
+                <Button varient='outlined'>I'm Feeling Lucky</Button>
+            </div>
         </div>
+
     )
 }
 
