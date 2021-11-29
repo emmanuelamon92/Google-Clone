@@ -6,11 +6,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  // <React.StrictMode>
-    <Router>
-      <App />
-    </Router>,
-  // </React.StrictMode>,
+  <React.StrictMode>
+    <StateProvider initialState={initialState} reducer={reducer}>
+      <Router>
+        <App />
+      </Router>
+    </StateProvider>,
+  </React.StrictMode>,
   document.getElementById('root')
 );
 
