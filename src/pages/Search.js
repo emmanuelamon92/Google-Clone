@@ -2,10 +2,14 @@ import React, {useState} from 'react'
 import './Search.css'
 import { Search as SearchIcon, Mic as MicIcon } from '@mui/icons-material';
 import { Button } from '@mui/material';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useStateValue } from '../StateProvider';
+import { actionTypes } from '../reducer';
 
 
-function Search({hideButtons = false}) {
+function Search({ hideButtons = false }) {
+    const [{}, dispatch] = useStateValue();
+
     const [input, setInput] = useState('')
     const navigate = useNavigate()
     
@@ -13,7 +17,13 @@ function Search({hideButtons = false}) {
         e.preventDefault();
 
         console.log('you hit the search button >>', input)
-        
+
+        dispatch({
+            type: actionTypes.SET_SEARCH_TERM,
+            term: input
+        })
+
+        //Navigates to search after search is initiated
         navigate('/search')
     }
     return (
