@@ -5,7 +5,7 @@ import { useStateValue } from '../StateProvider';
 // import useGoogleSearch from '../useGoogleSearch';
 import Response from '../response';
 import Search from './Search';
-import { Search as SearchIcon, Description as DescriptionIcon, Image as ImageIcon, LocalOffer as LocalOfferIcon, Room as RoomIcon, MoreVert as MoreVertIcon } from '@mui/material';
+import { Search as SearchIcon, Description as DescriptionIcon, Image as ImageIcon, LocalOffer as LocalOfferIcon, Room as RoomIcon, MoreVert as MoreVertIcon } from '@mui/icons-material';
 
 function SearchPage() {
     const [{ term }, dispatch] = useStateValue();
@@ -40,19 +40,19 @@ function SearchPage() {
                             </div>
                             <div className="searchPage__option">
                                 <ImageIcon />
-                                <Link to="/images"></Link>
+                                <Link to="/images">Images</Link>
                             </div>
                             <div className="searchPage__option">
                                 <LocalOfferIcon />
-                                <Link to="/shopping"></Link>
+                                <Link to="/shopping">Shopping</Link>
                             </div>
                             <div className="searchPage__option">
                                 <RoomIcon />
-                                <Link to="/maps"></Link>
+                                <Link to="/maps">Maps</Link>
                             </div>
                             <div className="searchPage__option">
                                 <MoreVertIcon />
-                                <Link to="/more"></Link>
+                                <Link to="/more">More</Link>
                             </div>
                         </div>
                         <div className="searchPage__optionsRight">
