@@ -66,6 +66,19 @@ function SearchPage() {
                     </div>
                 </div>
             </div>
+            {true && (
+                <div className="searchPage__results">
+                    <p className="searchPage__resultCount">About {data?.searchInformation.formattedTotalResults} results ({data?.searchInformation.formattedSearchTime} seconds) for {term}</p>
+
+                    {data?.items.map(item => (
+                        <div className="searchPage__result">
+                            <a href={item.link}>{item.displayLink}</a>
+                            <a className="searchPage__resultTitle" href={item.link}><h3>{item.title}</h3></a>
+                        </div>
+                    ))}
+                </div>    
+            )}
+
         </div>
     )
 }
