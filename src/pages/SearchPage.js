@@ -2,14 +2,14 @@ import React from 'react';
 import './SearchPage.css';
 import { Link } from 'react-router-dom';
 import { useStateValue } from '../StateProvider';
-// import useGoogleSearch from '../useGoogleSearch';
+import useGoogleSearch from '../useGoogleSearch';
 import Response from '../response';
 import Search from './Search';
 import { Search as SearchIcon, Description as DescriptionIcon, Image as ImageIcon, LocalOffer as LocalOfferIcon, Room as RoomIcon, MoreVert as MoreVertIcon } from '@mui/icons-material';
 
 function SearchPage() {
     const [{ term }, dispatch] = useStateValue();
-    
+
     // LIVE API CALL
     const { data } = useGoogleSearch(term);
     
@@ -68,7 +68,7 @@ function SearchPage() {
                     </div>
                 </div>
             </div>
-            {true && (
+            {term && (
                 <div className="searchPage__results">
                     <p className="searchPage__resultCount">About {data?.searchInformation.formattedTotalResults} results ({data?.searchInformation.formattedSearchTime} seconds) for {term}</p>
 
