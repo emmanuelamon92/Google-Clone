@@ -3,7 +3,7 @@ import './SearchPage.css';
 import { Link } from 'react-router-dom';
 import { useStateValue } from '../StateProvider';
 import useGoogleSearch from '../useGoogleSearch';
-import Response from '../response';
+// import Response from '../response';
 import Search from './Search';
 import { Search as SearchIcon, Description as DescriptionIcon, Image as ImageIcon, LocalOffer as LocalOfferIcon, Room as RoomIcon, MoreVert as MoreVertIcon } from '@mui/icons-material';
 
