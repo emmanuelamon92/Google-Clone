@@ -1,6 +1,6 @@
 # Google Clone
 
-### Hosting URLs
+## Hosting URLs
 clone-24d07.firebaseapp.com
 
 clone-24d07.web.app
