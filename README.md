@@ -11,9 +11,9 @@ clone-24d07.web.app
 3. firebase init
 - Hosting: Configure and deploy
 - Use an existing project
-    - build
-    - yes
-    - no
+- build
+- yes
+- no
 4. npm run build (updates "/build/index.html" file which updates brower)
 5. firebase deploy
 
