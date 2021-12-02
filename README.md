@@ -1,8 +1,8 @@
 ## Google Clone
 
 # Hosting URLs
-clone-24d07.firebaseapp.com
-clone-24d07.web.app
+- clone-24d07.firebaseapp.com
+- clone-24d07.web.app
 
 # Firebase Deploying
 1. npm install -g firebase-tools
@@ -17,8 +17,8 @@ clone-24d07.web.app
 5. firebase deploy
 
 # Firebase Updating
-npm run build
-firebase deploy
+-npm run build
+-firebase deploy
 
 # See Changes in browser
 - Clear Cache (cmd+shift+R)
