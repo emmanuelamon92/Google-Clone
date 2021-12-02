@@ -18,13 +18,8 @@ clone-24d07.web.app
 5. firebase deploy
 
 ## Firebase Updating
-npm run build
-
-firebase deploy
+1. npm run build
+2. firebase deploy
 
 ## See Changes in browser
-Clear Cache (cmd+shift+R)
-
-OR
-
-Turn of Cache in Network Tab (Chrome Inspect)
+Clear Cache (cmd+shift+R) or Turn of Cache in Network Tab (Chrome Inspect)
